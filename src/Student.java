@@ -1,15 +1,16 @@
 public class Student {
-    private int ID = 1;
+    private int ID = 0;
+    private static int incrementID = 0;
     private final String Dep = "CS";
     private String name;
     private int semester;
-    public Student(int ID, String name,  int semester){
-        this.ID = ID;
+    public Student(String name,  int semester){
+        this.ID = incrementID++;
         this.name = name;
         this.semester = semester;
     }
-    public Student(int ID, String name){
-        this.ID = ID;
+    public Student(String name){
+        this.ID = incrementID++;;
         this.name = name;
         this.semester = 1;
     }
